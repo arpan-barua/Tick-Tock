@@ -1,0 +1,21 @@
+.login-section{
+        border: 1px solid lightgray;
+        justify-content: center;
+        border-radius: 15px;
+        margin-top: 200px;
+        margin-left: 400px;
+        margin-right: 450px;
+        width: 450px;
+        padding: 50px;
+        text-align: center;
+        color:gray;
+
+    }
+.google-button{
+        background-color: white;
+        width: 350px;
+        border-radius: 10px;
+        color: gray;
+        font-weight: 500;
+    } 
+    

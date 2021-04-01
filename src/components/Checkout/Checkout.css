@@ -1,0 +1,19 @@
+.checkout-table{
+    font-weight: 500;
+    color: gray;
+}
+
+.table-section{
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 5px 5px 10px gainsboro;
+}
+
+.checkout-container img{
+    width: 500px;
+}
+
+.checkout-container{
+    margin-top: 100px;
+    margin-left: 30px;
+}

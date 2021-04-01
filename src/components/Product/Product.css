@@ -1,0 +1,12 @@
+.product {
+    background-color: white;
+    text-align: center;
+    color: gray;
+    padding: 10px 0px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px lightgray;
+  }
+
+  .product img{
+      width: 250px;
+  }
