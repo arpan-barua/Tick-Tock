@@ -1,12 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { PageContext } from "../../App";
-import './Header.css';
-import Logo from '../../images/Geo Smart.png';
-
+import "./Header.css";
 
 const Header = () => {
-  const [loggedInUser, setLoggedInUser] = useContext(PageContext);
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light">
@@ -38,14 +34,14 @@ const Header = () => {
                 </a>
               </Link>
               <Link to="/admin">
-              <a className="nav-link" href="#">
-                Admin
-              </a>
+                <a className="nav-link" href="#">
+                  Admin
+                </a>
               </Link>
               <Link>
-              <a className="nav-link" href="#">
-                Deals
-              </a>
+                <a className="nav-link" href="#">
+                  Deals
+                </a>
               </Link>
             </div>
           </div>

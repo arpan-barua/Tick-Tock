@@ -1,16 +1,19 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
-import { PageContext } from "../../App";
+import { loginContext, PageContext } from "../../App";
 import "./Checkout.css";
 
 const Checkout = () => {
   const { id } = useParams();
-  const [loggedInUser, setLoggedInUser] = useContext(PageContext);
+  const [loggedInUser, setLoggedInUser] = useContext(loginContext);
   const [products, setProducts] = useContext(PageContext);
+  const [checkOut, setCheckOut] = useState({});
+
   const handleCheckOut = () => {
-    const newOrders = { ...loggedInUser, ...products };
-    fetch("http://localhost:5055/addOrders", {
+    const newOrders = { ...loggedInUser, ...checkOut };
+
+    fetch("https://lychee-pudding-73705.herokuapp.com/addOrders", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -24,28 +27,26 @@ const Checkout = () => {
     });
     const { name, price, imageURL } = filteredProduct[0];
 
-    setProducts({
+    setCheckOut({
       name,
       price,
       imageURL,
     });
   }, [id]);
   return (
-    
-      <div className="checkout-container d-flex align-items-center">
-        <img src={products.imageURL} alt="" />
-        <div className='table-section'>
-          <table className="checkout-table" style={{ width: "500px" }}>
-            <tr>
-              <th>Description</th>
-              <th>Price</th>
-            </tr>
-            <tr>
-              <td>{products.name}</td>
-              <td>{products.price}</td>
-            </tr>
-          </table>
-        
+    <div className="checkout-container d-flex align-items-center">
+      <img src={checkOut.imageURL} alt="" />
+      <div className="table-section">
+        <table className="checkout-table" style={{ width: "500px" }}>
+          <tr>
+            <th>Description</th>
+            <th>Price</th>
+          </tr>
+          <tr>
+            <td>{checkOut.name}</td>
+            <td>{checkOut.price}</td>
+          </tr>
+        </table>
 
         <Link to="/orders">
           <button className="btn btn-danger mt-2" onClick={handleCheckOut}>
