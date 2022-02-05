@@ -8,6 +8,10 @@ const AddProduct = () => {
   const { register, handleSubmit, reset, watch, errors } = useForm();
   const [imageURL, setIMageURL] = useState(null);
 
+  const headers = {'Content-Type':'application/json',
+                    'Access-Control-Allow-Origin':'*',
+                    'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'};
+
   const onSubmit = (data) => {
     const productData = {
       name: data.name,
@@ -19,9 +23,7 @@ const AddProduct = () => {
 
     fetch(url, {
       method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
+      headers: headers,
       body: JSON.stringify(productData),
     }).then((res) => console.log("server side response", res));
     reset();
