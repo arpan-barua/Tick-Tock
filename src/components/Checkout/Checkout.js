@@ -13,7 +13,7 @@ const Checkout = () => {
   const handleCheckOut = () => {
     const newOrders = { ...loggedInUser, ...checkOut };
 
-    fetch("https://lychee-pudding-73705.herokuapp.com/addOrders", {
+    fetch("http://localhost:5055/addOrders", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
