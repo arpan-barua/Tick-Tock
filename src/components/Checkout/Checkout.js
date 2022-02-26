@@ -42,7 +42,7 @@ const Checkout = () => {
       <div className="col-md-5">
       <img className="img-fluid" src={checkOut.imageURL} alt="" />
       </div>
-      <div className="table-section col-md-5 ms-5 ps-5">
+      <div className="table-section rounded-pill col-md-5 ms-5 ps-5">
         <table className="checkout-table" style={{ width: "500px" }}>
           <tr>
             <th>Description</th>
@@ -55,7 +55,7 @@ const Checkout = () => {
         </table>
 
         <Link to="/orders">
-          <button className="btn btn-danger mt-2" onClick={handleCheckOut}>
+          <button className="btn btn-dark rounded-pill mt-2" onClick={handleCheckOut}>
             CheckOut
           </button>
         </Link>
