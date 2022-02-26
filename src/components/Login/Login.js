@@ -112,7 +112,7 @@ const Login = () => {
                     <br/>
                     {newUser && <input className='form-control' type="password" name="confirm-password" onBlur={handleBlur} id="" placeholder="Confirm Password" required/>}
                     <br/>
-                    <input className='form-control btn btn-danger' type="submit" value={newUser ? 'Sign Up' : 'Sign-In'}/>
+                    <input className='form-control btn btn-dark' type="submit" value={newUser ? 'Sign Up' : 'Sign-In'}/>
                 </form>
                 <br/>
                 

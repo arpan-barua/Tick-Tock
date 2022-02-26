@@ -63,7 +63,7 @@ const onSubmit = (data) => {
           <input
             type="submit"
             value="Save"
-            className="btn btn-danger form-control"
+            className="btn btn-dark form-control"
           />
         </form>
       </div>

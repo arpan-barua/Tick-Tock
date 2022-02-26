@@ -19,7 +19,7 @@ const Dashboard = () => {
           eligendi!
         </p>
         <p className="lead">
-          <a className="btn btn-light btn-lg" href="#" role="button">
+          <a className="btn btn-dark btn-lg" href="#" role="button">
             Learn more
           </a>
         </p>

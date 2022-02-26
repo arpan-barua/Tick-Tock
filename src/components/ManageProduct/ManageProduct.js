@@ -19,11 +19,11 @@ const ManageProduct = () => {
       {products.map((product) => {
         return (
           <div className="col-md-3">
-            <div className="product-list d-flex justify-content-around align-items-center">
+            <div className="product-list rounded-pill d-flex justify-content-around align-items-center">
               <p>{product.name}</p>
               <p>{product.price}</p>
               <button
-                className="btn btn-danger"
+                className="btn btn-dark rounded-pill"
                 onClick={() => deleteProduct(product._id)}
               >
                 Delete

@@ -10,7 +10,7 @@ const Product = (props) => {
       <h3>{name}</h3>
       <h6>{price}</h6>
       <Link to={`/checkout/${_id}`}>
-        <button className="btn btn-light">Buy Now</button>
+        <button className="btn btn-dark rounded-pill">Buy</button>
       </Link>
     </div>
   );
