@@ -9,7 +9,7 @@ const onSubmit = (data) => {
       email: data.email,
       phone: data.phone
     };
-    const url = `http://localhost:5055/addAAdmin`;
+    const url = `https://lychee-pudding-73705.herokuapp.com/addAAdmin`;
 
     fetch(url, {
       method: "POST",

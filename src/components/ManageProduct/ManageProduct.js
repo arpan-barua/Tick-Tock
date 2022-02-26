@@ -6,7 +6,7 @@ import "./ManageProduct.css";
 const ManageProduct = () => {
   const [products, setProducts] = useContext(PageContext);
   const deleteProduct = (id) => {
-    fetch(`http://localhost:5055/deleteProduct/${id}`, {
+    fetch(`https://lychee-pudding-73705.herokuapp.com/deleteProduct/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

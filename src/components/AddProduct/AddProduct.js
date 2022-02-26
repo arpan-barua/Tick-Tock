@@ -14,7 +14,7 @@ const AddProduct = () => {
       price: data.price,
       imageURL: imageURL,
     };
-    const url = `http://localhost:5055/addProduct`;
+    const url = `https://lychee-pudding-73705.herokuapp.com/addProduct`;
 
     fetch(url, {
       method: "POST",
