@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-// import { Link } from "react-router-dom";
 import { PageContext } from "../../App";
 import Sidebar from "../Sidebar/Sidebar";
 import "./ManageProduct.css";
