@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import "./AddProduct.css";
+import Sidebar from "../Sidebar/Sidebar";
 
 const AddProduct = () => {
   const { register, handleSubmit, reset, watch, errors } = useForm();
@@ -43,20 +43,10 @@ const AddProduct = () => {
 
   return (
     <div>
-      <div className="sidenav">
-        <Link to="/manage-product">
-          <a href="#">
-            <h6>Manage Product</h6>
-          </a>
-        </Link>
-        <Link to="/addProduct">
-          <a href="#">
-            <h6>Add Product</h6>
-          </a>
-        </Link>
-      </div>
+      <Sidebar></Sidebar>
+      <div className="form-container">
       <h4>Add Product</h4>
-      <div className="product-add d-flex justify-content-center">
+      <div className="product-add">
         <form onSubmit={handleSubmit(onSubmit)}>
           <label htmlFor="name">Product Name</label>
           <input
@@ -84,6 +74,7 @@ const AddProduct = () => {
             className="btn btn-danger form-control"
           />
         </form>
+        </div>
       </div>
     </div>
   );

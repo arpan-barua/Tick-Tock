@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { PageContext } from "../../App";
+import Sidebar from "../Sidebar/Sidebar";
 import "./ManageProduct.css";
 
 const ManageProduct = () => {
@@ -14,19 +15,8 @@ const ManageProduct = () => {
   };
   return (
     <div>
-      <div className="sidenav">
-        <Link to="/manage-product">
-          <a href="#">
-            <h6>Manage Product</h6>
-          </a>
-        </Link>
-        <Link to="/addProduct">
-          <a href="#">
-            <h6>Add Product</h6>
-          </a>
-        </Link>
-      </div>
-      <h5>Manage product</h5>
+      <Sidebar></Sidebar>
+      <h5 className="pt-4">Manage product</h5> <br />
       {products.map((product) => {
         return (
           <div className="col-md-3">

@@ -8,9 +8,9 @@ const Product = (props) => {
     <div className="product">
       <img src={imageURL} alt="" />
       <h3>{name}</h3>
-      <h2>{price}</h2>
+      <h6>{price}</h6>
       <Link to={`/checkout/${_id}`}>
-        <button className="btn btn-danger">Buy Now</button>
+        <button className="btn btn-light">Buy Now</button>
       </Link>
     </div>
   );

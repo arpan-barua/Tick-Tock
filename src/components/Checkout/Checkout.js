@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import { loginContext, PageContext } from "../../App";
+import Footer from "../Shared/Footer/Footer";
+import NavBar from "../Shared/Header/NavBar";
 import "./Checkout.css";
 
 const Checkout = () => {
@@ -34,9 +36,13 @@ const Checkout = () => {
     });
   }, [id]);
   return (
-    <div className="checkout-container d-flex align-items-center">
-      <img src={checkOut.imageURL} alt="" />
-      <div className="table-section">
+    <div>
+      <NavBar/>
+    <div className="checkout-container d-flex align-items-center row">
+      <div className="col-md-5">
+      <img className="img-fluid" src={checkOut.imageURL} alt="" />
+      </div>
+      <div className="table-section col-md-5 ms-5 ps-5">
         <table className="checkout-table" style={{ width: "500px" }}>
           <tr>
             <th>Description</th>
@@ -54,6 +60,8 @@ const Checkout = () => {
           </button>
         </Link>
       </div>
+    </div>
+    <Footer/>
     </div>
   );
 };

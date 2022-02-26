@@ -1,5 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { loginContext } from "../../App";
+import Footer from "../Shared/Footer/Footer";
+import NavBar from "../Shared/Header/NavBar";
 import "./Order.css";
 
 const Orders = () => {
@@ -12,12 +14,14 @@ const Orders = () => {
       .then((data) => setOrders(data));
   }, []);
   return (
+    <div>
+      <NavBar/>
     <div className="order-card">
       <div>
         <h3>You have {orders.length} orders</h3>
         {orders.map((order) => {
           return (
-            <div className="card mb-3" style={{ maxWidth: "540px" }}>
+            <div className="card rounded-pill mb-3" style={{ maxWidth: "540px" }}>
               <div className="row g-0">
                 <div className="order-image col-md-4">
                   <img src={order.imageURL} alt="" />
@@ -32,6 +36,8 @@ const Orders = () => {
           );
         })}
       </div>
+    </div>
+    <Footer/>
     </div>
   );
 };

@@ -4,9 +4,9 @@
     color: gray;
     padding: 10px 0px;
     border-radius: 20px;
-    box-shadow: 2px 2px 2px lightgray;
+    box-shadow: 1px 1px 1px lightgray;
   }
 
   .product img{
-      width: 250px;
+      width: 160px;
   }

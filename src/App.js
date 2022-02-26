@@ -8,9 +8,9 @@ import Checkout from "./components/Checkout/Checkout";
 import Login from "./components/Login/Login";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Orders from "./components/Orders/Orders";
-import Admin from "./components/Admin/Admin";
-import Header from "./components/Header/Header";
+import Dashboard from "./components/Dashboard/Dashboard";
 import ManageProduct from "./components/ManageProduct/ManageProduct";
+import AddAdmin from "./components/AddAdmin/AddAdmin";
 
 export const PageContext = createContext();
 export const loginContext = createContext();
@@ -29,7 +29,6 @@ function App() {
     <loginContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <PageContext.Provider value={[products, setProducts]}>
         <Router>
-          <Header />
           <Switch>
             <Route exact path="/">
               <Home />
@@ -40,20 +39,23 @@ function App() {
             <Route path="/login">
               <Login />
             </Route>
-            <PrivateRoute path="/checkout/:id">
+            <Route path="/checkout/:id">
               <Checkout />
-            </PrivateRoute>
+            </Route>
             <PrivateRoute path="/orders">
               <Orders />
             </PrivateRoute>
-            <PrivateRoute path="/admin">
-              <Admin />
+            <PrivateRoute path="/dashboard">
+              <Dashboard/>
             </PrivateRoute>
-            <PrivateRoute path="/manage-product">
+            <PrivateRoute path="/manageProduct">
               <ManageProduct />
             </PrivateRoute>
             <PrivateRoute path="/addProduct">
               <AddProduct />
+            </PrivateRoute>
+            <PrivateRoute path="/addAdmin">
+              <AddAdmin/>
             </PrivateRoute>
             <Route path="*">
               <NotFound />

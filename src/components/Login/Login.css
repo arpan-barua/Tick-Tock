@@ -1,21 +1,19 @@
-.login-section{
-        border: 1px solid lightgray;
-        justify-content: center;
-        border-radius: 15px;
-        margin-top: 200px;
-        margin-left: 400px;
-        margin-right: 450px;
-        width: 450px;
-        padding: 50px;
-        text-align: center;
-        color:gray;
+.body{
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
 
-    }
-.google-button{
-        background-color: white;
-        width: 350px;
-        border-radius: 10px;
-        color: gray;
-        font-weight: 500;
-    } 
-    
+}
+.login-area{
+    border: 1px solid lightgray;
+    width: 400px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+}
+
+.google-btn{
+    margin-left: 43%;
+    margin-top: 20px;
+    border-radius: 20px;
+}
