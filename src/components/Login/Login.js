@@ -125,7 +125,7 @@ const Login = () => {
             </div>
             <div className="google-btn">
           <button
-            className="btn btn-light rounded-pill"
+            className="btn btn-dark rounded-pill"
             onClick={handleGoogleSignIn}
           >
             {" "}
